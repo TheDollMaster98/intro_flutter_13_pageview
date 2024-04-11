@@ -149,24 +149,24 @@ class PageViewIndicators extends StatelessWidget {
       // mainAxisAlignment posiziona i figli lungo l'asse orizzontale.
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
-          splashPages.length,
-          // Container è un box che contiene un widget.
-          //vado a comandare la pageview con GestureDetector
-          // che mi aiuta a
-          (index) => GestureDetector(
-                onTap: () => onIndicatorPressed(index),
-                child: Container(
-                  width: 10,
-                  height: 10,
-                  margin: const EdgeInsets.symmetric(horizontal: 5),
-                  // BoxDecoration fornisce una serie di modi per dipingere un box.
-                  decoration: BoxDecoration(
-                    color:
-                        index == pageViewIndex ? Colors.white : Colors.white54,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              )),
+        splashPages.length,
+        // Container è un box che contiene un widget.
+        //vado a comandare la pageview con GestureDetector
+        // che mi aiuta a
+        (index) => GestureDetector(
+          onTap: () => onIndicatorPressed(index),
+          child: Container(
+            width: 10,
+            height: 10,
+            margin: const EdgeInsets.symmetric(horizontal: 5),
+            // BoxDecoration fornisce una serie di modi per dipingere un box.
+            decoration: BoxDecoration(
+              color: index == pageViewIndex ? Colors.white : Colors.white54,
+              shape: BoxShape.circle,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
